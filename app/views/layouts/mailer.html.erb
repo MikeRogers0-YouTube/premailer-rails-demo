@@ -2,32 +2,34 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet">
-    
+    <%= stylesheet_pack_tag 'mailer' %>
     <style>
-      /* Email styles need to be inline */
+/* Email styles need to be inline */
     </style>
   </head>
 
   <body>
-    <header>
-      <%= link_to '#' do %>
-        <img alt="Logo" src="https://via.placeholder.com/200x70?text=Logo" height="70">
-      <% end %>
-    </header>
+    <div class="bg-dark p-5">
+      <div class="container bg-white rounded shadow p-4">
+        <div class="text-center mb-5">
+          <%= link_to '#' do %>
+            <img alt="Logo" src="https://via.placeholder.com/200x70?text=Logo" height="70">
+          <% end %>
+        </div>
 
-    <main>
-      <%= yield %>
-    </main>
+        <div>
+          <%= yield %>
+        </div>
 
-    <footer>
-      <hr>
-      <p>
-      <%= link_to '#' do %>
-        <small>Contact info</small>
-      <% end %>
-      </p>
-    </footer>
+        <div class="mt-5">
+          <hr>
+          <p>
+            <%= link_to '#' do %>
+              <small>Contact info</small>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
