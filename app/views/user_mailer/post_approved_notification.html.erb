@@ -5,5 +5,7 @@
 </p>
 
 <p>
-  <%= link_to 'View Post', Post.last, class: 'btn btn-primary' %>
+  <%= link_to Post.last, class: 'btn btn-primary' do %>
+    <b>View Post</b>
+  <% end %>
 </p>

@@ -2,19 +2,32 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <%#= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet">
     
     <style>
       /* Email styles need to be inline */
     </style>
   </head>
 
-  <body class="bg-dark">
-      <div class="container my-5 bg-white rounded shadow">
-        <div class="p-4">
-          <%= yield %>
-        </div>
-      </div>
+  <body>
+    <header>
+      <%= link_to '#' do %>
+        <img alt="Logo" src="https://via.placeholder.com/200x70?text=Logo" height="70">
+      <% end %>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      <hr>
+      <p>
+      <%= link_to '#' do %>
+        <small>Contact info</small>
+      <% end %>
+      </p>
+    </footer>
   </body>
 </html>
