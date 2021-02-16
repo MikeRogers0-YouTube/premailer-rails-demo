@@ -7,7 +7,6 @@ gem "bootsnap", ">= 1.4.4", require: false
 gem "image_processing", "~> 1.12"
 gem "lograge", "~> 0.11.2"
 gem "pg", "~> 1.1"
-gem "premailer-rails", "~> 1.11"
 gem "puma", "~> 5.0"
 gem "rails", "~> 6.1.1"
 gem "redis", "~> 4.2"

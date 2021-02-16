@@ -2,7 +2,7 @@
 if ENV["URL"].present?
   Rails.application.default_url_options = {
     host: ENV["URL"],
-    protocol: "https"
+    protocol: ENV.fetch("URL_PROTOCOL", "https")
   }
 elsif ENV["HEROKU_APP_NAME"].present?
   Rails.application.default_url_options = {
